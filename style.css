@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Manrope:wght@500;700&family=Outfit&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    font-family: Manrope;
+}
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 55%;
+    height: 30%;
+    border-radius: 10px;
+    background-color: hsl(0,0%, 100%);
+}
+#drawers {
+    height: 100%;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#avatar-michelle{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+.big {
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: .5rem;
+}
+.small {
+    color: hsl(214, 17%, 51%);
+}
+.text{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;  
+    flex: 60%;
+}
+#profile {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    position: relative;
+}
+.sub-text {
+    margin-left: 1rem;
+}
+h3 {
+    color: hsl(217, 19%, 35%);
+}
+#profile p {
+    color: hsl(214, 17%, 51%);
+}
+.social {
+    background-color: hsl(217, 19%, 35%);
+    width: 240px;
+    height: 50px;
+    padding: 5px 25px;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 10px;
+    position: absolute;
+    right: -90px;
+    bottom: 50px;
+    transition: all 0.3s ease;
+}
+a {
+    padding: 0 10px;
+    cursor: pointer;
+}
+.social::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    content: "";
+    position: absolute;
+    right: 110px;
+    top: 49px;
+}
+.hidden {
+    display: none;
+}
+.social p {
+    letter-spacing: 5px;
+    color: hsl(214, 17%, 51%);
+}
+button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: hsl(210, 46%, 95%) url(images/icon-share.svg) no-repeat center;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+button:hover {
+    background:  hsl(214, 17%, 51%) url(images/Share.svg) no-repeat center;
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+@media screen and (max-width: 400px) {
+    #main {
+        width: 80%;
+        height: 100%;
+        flex-direction: column;
+    }
+    #drawers {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .text{
+        width: 100%;
+        margin: 1rem;
+    }
+    #profile {
+        margin: unset;
+        margin-top: 1.5rem;
+    }
+    .social {
+        width: 300px;
+        height: 65px;
+        padding: 5px 25px;
+        border-radius: 0 0 10px 10px;
+        justify-content: left;
+        left: -56px;
+        top: -9px;
+    }
+    .social::before {
+       display: none;
+    }
+    .hidden {
+        display: none;
+    }
+    button {
+        width: 2rem;
+        height: 2rem;
+        right: 0;
+        top: 5px;
+    }  
+}
